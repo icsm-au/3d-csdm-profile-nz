@@ -1,0 +1,70 @@
+{
+  "name": "NZ Cadastral Survey Data Exchange Profile",
+  "highlighted": true,
+  "abstract": "Implementation Profile of the ICSM Cadastral Survey Data Exchange Model for use in New Zealand",
+  "status": "under-development",
+  "dateTimeAddition": "2023-07-31T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2023-08-08",
+  "sources": [
+    {
+      "title": "3D Cadastre Survey Data Model",
+      "link": "https://icsm-au.github.io/3d-csdm-design/2022/spec.html"
+    }
+  ],
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "maturity": "development",
+  "scope": "profiles",
+  "tags": [
+    "nz",
+    "sosa",
+    "ssn",
+    "o&m",
+    "o&m&s",
+    "csdm",
+    "profile"
+  ],
+  "superBBlock": false,
+  "rulesDeferred": [
+    "../../profiles/nz-pointnames-shacl.ttl"
+  ],
+  "shaclRules": [
+    "../../profiles/nz-vocabs-shacl.ttl",
+    "../../profiles/nz-survey-metadata-shacl.ttl",
+    "../../profiles/nz-prov-shacl.ttl"
+  ],
+  "shaclClosures": [
+    "../../vocabularies/CSD-Header/icsm-admin-unit-type.ttl",
+    "../../vocabularies/Parcels/icsm-parcel-state.ttl",
+    "../../vocabularies/SurveyObservations/icsm-angle-type.ttl",
+    "../../vocabularies/SurveyObservations/icsm-distance-type.ttl",
+    "../../vocabularies/SurveyObservations/icsm-equipment-type.ttl",
+    "../../vocabularies/SurveyObservations/icsm-procedure-used.ttl",
+    "../../vocabularies/SurveyObservations/nz-procedure-used.ttl",
+    "../../vocabularies/SurveyPoints/condition/nz-condition.ttl",
+    "../../vocabularies/SurveyPoints/monument/nz-monument-type.ttl",
+    "../../vocabularies/CSD-Header/nz-crs.ttl",
+    "../../vocabularies/CSD-Header/nz-compound-crs.ttl",
+    "../../vocabularies/CSD-Header/nz-land-district.ttl",
+    "../../vocabularies/CSD-Header/nz-territorial-authority.ttl",
+    "../../vocabularies/CSD-Header/nz-survey-documentation-type.ttl",
+    "../../vocabularies/CSD-Header/nz-annotation.ttl",
+    "../../vocabularies/CSD-Header/nz-survey-type.ttl",
+    "../../vocabularies/CSD-Header/nz-annotation.ttl",
+    "../../vocabularies/CSD-Header/nz-vhd.ttl",
+    "../../vocabularies/CSD-Header/nz-survey-purpose.ttl",
+    "../../vocabularies/Parcels/nz-parcel-type.ttl",
+    "../../vocabularies/Parcels/nz-secondary-parcel-purpose.ttl",
+    "../../vocabularies/Parcels/nz-parcel-purpose.ttl",
+    "../../vocabularies/Parcels/nz-parcel-state.ttl",
+    "../../vocabularies/SurveyObservations/nz-vector-purpose.ttl",
+
+    "../../vocabularies/SurveyPoints/accuracy/nz-point-class.ttl",
+    "../../vocabularies/SurveyPoints/monument/nz-monument-type.ttl",
+    "../../vocabularies/SurveyPoints/condition/nz-condition.ttl",
+    "../../vocabularies/SurveyPoints/purpose/nz-purpose.ttl",
+    "../../vocabularies/SurveyPoints/state/nz-state.ttl"
+  ]
+}
