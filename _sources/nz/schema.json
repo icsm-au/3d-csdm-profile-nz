@@ -3,7 +3,7 @@
   "description": "NZ 2D profile of Cadastral Survey Data Model - points must have elevations but pitch may not be present or null in vector observations",
   "allOf": [
     {
-      "$ref": "bblocks://icsm.csdm.profiles.common"
+      "$ref": "bblocks://icsm.profiles.common"
     }
   ]
 }
