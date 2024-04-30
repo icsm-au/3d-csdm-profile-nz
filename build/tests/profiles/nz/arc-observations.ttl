@@ -34,11 +34,11 @@
     rdfs:label "DP 583201" ;
     prov:wasGeneratedBy <https://www.nz-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:territorialAuthority ;
-            oa:hasTarget nz-territorial-authority:040 ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:landDistrict ;
-            oa:hasTarget nz-land-district:WN ] ;
+            oa:hasTarget nz-land-district:WN ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:territorialAuthority ;
+            oa:hasTarget nz-territorial-authority:040 ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:2111 ;
     container:observedVectors <https://www.nz-example.com/features/observedVectors> ;
@@ -128,14 +128,14 @@
 <https://www.nz-example.com/features/26013568> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "PEG 105 DP 583201" ;
-            dcterms:hasPart [ rdfs:label "PEG" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "583201" ;
+            dcterms:hasPart [ rdfs:label "583201" ;
                     commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "105" ;
+                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "105" ;
-                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
+                [ rdfs:label "PEG" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     rdfs:comment "0.4m SW of corrugated iron fence" ;
     commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
@@ -151,10 +151,10 @@
     rdfs:label [ rdfs:label "PEG 8 DP 19498" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "8" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "PEG" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "8" ;
+                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "19498" ;
                     commonpatterns:namePartType "planIdentifier" ] ] ;
     commonpatterns:qualityMeasure 3.4e-02 ;
@@ -172,10 +172,10 @@
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "200" ;
                     commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "Unmk" ;
-                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "583201" ;
-                    commonpatterns:namePartType "planIdentifier" ] ] ;
+                    commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "Unmk" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -189,12 +189,12 @@
     rdfs:label [ rdfs:label "IS 102 DP 583201" ;
             dcterms:hasPart [ rdfs:label "583201" ;
                     commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "IS" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "102" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "IS" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
     rdfs:comment "0.35m W of wooden fence" ;
     commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
@@ -208,14 +208,14 @@
 <https://www.nz-example.com/features/49635032> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "IS 104 DP 583201" ;
-            dcterms:hasPart [ rdfs:label "IS" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "583201" ;
+            dcterms:hasPart [ rdfs:label "583201" ;
                     commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "104" ;
+                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "104" ;
-                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
+                [ rdfs:label "IS" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 3.4e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:is ;
@@ -227,12 +227,12 @@
 <https://www.nz-example.com/features/49635033> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "IS 103 DP 583201" ;
-            dcterms:hasPart [ rdfs:label "583201" ;
-                    commonpatterns:namePartType "planIdentifier" ],
+            dcterms:hasPart [ rdfs:label "103" ;
+                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "103" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
+                [ rdfs:label "583201" ;
+                    commonpatterns:namePartType "planIdentifier" ],
                 [ rdfs:label "IS" ;
                     commonpatterns:namePartType "MarkType" ] ] ;
     rdfs:comment "In footpath, 0.65m SW of wooden fence" ;

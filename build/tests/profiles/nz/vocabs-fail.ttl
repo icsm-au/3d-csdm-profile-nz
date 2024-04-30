@@ -27,10 +27,10 @@
 <file:///github/workspace/1725787> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM E DP 119552" ;
-            dct:hasPart [ rdfs:label "RM E" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+            dct:hasPart [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "RM E" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     rdfs:comment "ALP in channel of drive" ;
     surv:monumentedBy [ surv:condition <fail-monument-condition:mkfd> ;
             surv:form nz-monument-form:bp ;

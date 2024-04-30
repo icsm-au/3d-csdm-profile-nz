@@ -17,12 +17,12 @@
             rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/build/generateddocs/slate-build/profiles/nz/" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/build/generateddocs/markdown/profiles/nz/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/bblock/icsm.profiles.nz" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/build/generateddocs/json-full/profiles/nz/index.json" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/build/generateddocs/json-full/profiles/nz/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-nz/bblock/icsm.profiles.nz" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-18"^^xsd:date ;
+    dct:modified "2024-04-30"^^xsd:date ;
     dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
     skos:inScheme <https://icsm-au.github.io/3d-csdm-profile-nz/> ;
     dcat:keyword "csdm",
@@ -61,7 +61,8 @@
 <https://icsm-au.github.io/3d-csdm-profile-nz/> a skos:ConceptScheme,
         dcat:Catalog ;
     rdfs:label "Building Blocks - NZ Implementation Profile for 3D CSDM" ;
-    dct:abstract """This repository contains the NZ profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), extending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile/icsm/).
+    dct:abstract """This repository contains the NZ profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/),
+extending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).
  
 """ ;
     dct:description """
@@ -76,15 +77,15 @@ Profiles are defined in a consistent, machine-readable and validatable way using
         <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-04-18T22:01:01.359478"^^xsd:dateTime ;
-    prov:startedAtTime "2024-04-18T22:01:01.301006"^^xsd:dateTime ;
+    prov:endedAtTime "2024-04-30T07:38:18.404765"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-30T07:38:18.351851"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:51a559b84c21bde0afbccea04fcfcb2b45731560" ;
-            rdfs:seeAlso <https://icsm-au.github.io/3d-csdm-profile-nz/build/register.json> ] ;
+            dct:hasVersion "git:745a96bf18cb46d26c3d143d7f0c02244826bbad" ;
+            rdfs:seeAlso <https://icsm-au.github.io/3d-csdm-profile-nz/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

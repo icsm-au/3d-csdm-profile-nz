@@ -33,12 +33,12 @@
     rdfs:label [ rdfs:label "RM C DP 119552" ;
             dct:hasPart [ rdfs:label "C" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "RM" ;
-                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "119552" ;
                     commonpatterns:namePartType "Source" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     surv:geodeticid "EQ9W" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:pin ;
@@ -50,10 +50,10 @@
 <file:///github/workspace/1725787> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM E DP 119552" ;
-            dct:hasPart [ rdfs:label "RM E" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Fail" ] ] ;
+            dct:hasPart [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Fail" ],
+                [ rdfs:label "RM E" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     rdfs:comment "ALP in channel of drive" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:bp ;
@@ -65,10 +65,10 @@
 <file:///github/workspace/44396823> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "Fail" ;
-            dct:hasPart [ rdfs:label "481392" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "ALP I" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+            dct:hasPart [ rdfs:label "ALP I" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "481392" ;
+                    commonpatterns:namePartType "Source" ] ] ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:pin ;
             surv:state nz-monument-state:old ] ;

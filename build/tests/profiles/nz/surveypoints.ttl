@@ -27,11 +27,11 @@
     rdfs:label "DP 572532" ;
     prov:wasGeneratedBy <https://www.nz-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:landDistrict ;
-            oa:hasTarget nz-land-district:NA ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:territorialAuthority ;
-            oa:hasTarget nz-territorial-authority:076 ] ;
+            oa:hasTarget nz-territorial-authority:076 ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:landDistrict ;
+            oa:hasTarget nz-land-district:NA ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:2105 ;
     container:points <https://www.nz-example.com/features/BoundaryMark>,
@@ -47,14 +47,14 @@
 <https://www.nz-example.com/features/49655171> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "DISK 15 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
+            dcterms:hasPart [ rdfs:label "DISK" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "15" ;
                     commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "DISK" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityClass nz-point-class:7 ;
     commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
@@ -69,10 +69,10 @@
     rdfs:label [ rdfs:label "AP 1 DP 572532" ;
             dcterms:hasPart [ rdfs:label "572532" ;
                     commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "AP" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType "MarkIdentifier" ] ] ;
     rdfs:comment "Flush in conc" ;
@@ -91,10 +91,10 @@
     rdfs:label [ rdfs:label "RM H DP 119553" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "H" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "RM" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "H" ;
+                    commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "119553" ;
                     commonpatterns:namePartType "planIdentifier" ] ] ;
     commonpatterns:qualityClass nz-point-class:6 ;
