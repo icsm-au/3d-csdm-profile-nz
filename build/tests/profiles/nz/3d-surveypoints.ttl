@@ -20,11 +20,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.nz-example.com/features/DP-572532> a container:CSD,
         geojson:FeatureCollection ;
     rdfs:label "DP 572532" ;
+    dcterms:time [ time:hasTime "2023-03-10"^^xsd:date ] ;
     prov:wasGeneratedBy <https://www.nz-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:territorialAuthority ;
@@ -52,26 +54,28 @@
                     commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "15" ;
                     commonpatterns:namePartType "MarkIdentifier" ] ] ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( -3.693106e+01 1.747505e+02 4.68e+01 ) ] ;
     commonpatterns:qualityClass nz-point-class:7 ;
     commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
             surv:form nz-monument-form:disk ;
             surv:state nz-monument-state:new ] ;
-    surv:purpose nz-surveypoint-purpose:bndy ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( -3.693106e+01 1.747505e+02 4.68e+01 ) ] .
+    surv:purpose nz-surveypoint-purpose:bndy .
 
 <https://www.nz-example.com/features/49655185> a surv:GeodeticReferenceMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "AP 1 DP 572532" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType "MarkIdentifier" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "planIdentifier" ],
                 [ rdfs:label "AP" ;
                     commonpatterns:namePartType "MarkType" ] ] ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( -3.693097e+01 1.747504e+02 4.851e+01 ) ] ;
     rdfs:comment "Flush in conc" ;
     commonpatterns:qualityClass nz-point-class:6 ;
     commonpatterns:qualityMeasure 3.3e-02 ;
@@ -79,9 +83,7 @@
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
             surv:form nz-monument-form:pin ;
             surv:state nz-monument-state:new ] ;
-    surv:purpose nz-surveypoint-purpose:prm ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( -3.693097e+01 1.747504e+02 4.851e+01 ) ] .
+    surv:purpose nz-surveypoint-purpose:prm .
 
 <https://www.nz-example.com/features/49655186> a surv:CadastralMark,
         geojson:Feature ;
@@ -94,14 +96,14 @@
                     commonpatterns:namePartType "MarkIdentifier" ],
                 [ rdfs:label "RM" ;
                     commonpatterns:namePartType "MarkType" ] ] ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( -3.693093e+01 1.747502e+02 4.944e+01 ) ] ;
     commonpatterns:qualityClass nz-point-class:6 ;
     commonpatterns:qualityMeasure 3.4e-02 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:bp ;
             surv:state nz-monument-state:old ] ;
-    surv:purpose nz-surveypoint-purpose:non-bdy ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( -3.693093e+01 1.747502e+02 4.944e+01 ) ] .
+    surv:purpose nz-surveypoint-purpose:non-bdy .
 
 <https://www.nz-example.com/features/BoundaryMark> a geojson:FeatureCollection,
         <https://www.nz-example.com/features/BoundaryMarks> ;
@@ -114,24 +116,28 @@
 <https://www.nz-example.com/features/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
 
 <https://www.nz-example.com/features/DP_104392> rdfs:label "DP 104392" ;
+    dcterms:time [ time:hasTime "2023-03-10"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:landDistrict ;
             oa:hasTarget nz-land-district:NA ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.nz-example.com/features/DP_119552> rdfs:label "DP 119552" ;
+    dcterms:time [ time:hasTime "2023-03-10"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:landDistrict ;
             oa:hasTarget nz-land-district:NA ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.nz-example.com/features/DP_119553> rdfs:label "DP 119553" ;
+    dcterms:time [ time:hasTime "2023-03-10"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:landDistrict ;
             oa:hasTarget nz-land-district:NA ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.nz-example.com/features/DP_481392> rdfs:label "DP 481392" ;
+    dcterms:time [ time:hasTime "2023-03-10"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:landDistrict ;
             oa:hasTarget nz-land-district:NA ] ;

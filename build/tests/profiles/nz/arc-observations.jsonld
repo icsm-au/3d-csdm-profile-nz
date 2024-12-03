@@ -1,4 +1,5 @@
 {
+  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld",
   "id": "DP-583201",
   "name": "DP 583201",
   "description": "New Zealand Arc Observation Example",
@@ -489,6 +490,5 @@
   ],
   "parcels": [],
   "supportingDocuments": [],
-  "annotations": [],
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld"
+  "annotations": []
 }

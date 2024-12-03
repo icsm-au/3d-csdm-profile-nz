@@ -1,4 +1,5 @@
 {
+  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld",
   "id": "DP-572532",
   "name": "DP 572532",
   "description": "Extended New Zealand Example",
@@ -4050,6 +4051,5 @@
       "role": "nz-annotation-role:certification",
       "dated": "2023-03-13T01:23:14Z"
     }
-  ],
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld"
+  ]
 }

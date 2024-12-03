@@ -1,4 +1,5 @@
 {
+  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld",
   "id": "fail-Examples-DP_572532",
   "name": "DP 572532",
   "description": "New Zealand fail Example",
@@ -85,6 +86,5 @@
     }
   ],
   "observedVectors": [],
-  "vectorObservations": [],
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld"
+  "vectorObservations": []
 }

@@ -25,10 +25,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.example.com/features/DP_572532> a geojson:FeatureCollection ;
     rdfs:label "DP 572532" ;
+    dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     prov:wasGeneratedBy <http://www.example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:territorialAuthority ;
@@ -62,14 +64,14 @@
 
 <http://www.example.com/features/8446454> a geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 1 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType "ParcelType" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "1" ;
-                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType "ParcelType" ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     parcel:interest [ parcel:interestLink <http://www.example.com/features/1040074> ;
             parcel:interestType nz-interest-type:c-t ],
         [ parcel:interestDateInForce "2023-03-10T11:32:21Z" ;
@@ -85,24 +87,24 @@
 
 <http://www.example.com/features/8446455> a geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 2 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "2" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType "ParcelType" ] ] ;
-    parcel:interest [ parcel:interestDateInForce "2023-03-10T11:34:16Z" ;
+                    commonpatterns:namePartType "ParcelType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ] ] ;
+    parcel:interest [ parcel:interestLink <http://www.example.com/features/1040075> ;
+            parcel:interestType nz-interest-type:c-t ],
+        [ parcel:interestDateInForce "2023-03-10T11:34:16Z" ;
             parcel:interestLink <http://www.example.com/features/20230310113416cc> ;
             parcel:interestType nz-interest-type:c ;
             parcel:referencedParcel <http://www.example.com/features/8446456> ],
         [ parcel:interestDateInForce "2023-03-10T11:32:21Z" ;
             parcel:interestLink <http://www.example.com/features/20230310113221b> ;
             parcel:interestType nz-interest-type:a ;
-            parcel:referencedParcel <http://www.example.com/features/5146568> ],
-        [ parcel:interestLink <http://www.example.com/features/1040075> ;
-            parcel:interestType nz-interest-type:c-t ] ;
+            parcel:referencedParcel <http://www.example.com/features/5146568> ] ;
     parcel:purpose nz-parcel-purpose:fst ;
     parcel:state nz-parcel-state: ;
     parcel:surfaceArea 1.196e+03 ;
@@ -146,6 +148,7 @@
 <http://www.example.com/features/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
 
 <http://www.example.com/features/DP_119552> rdfs:label "DP 119552" ;
+    dcterms:time [ time:hasTime "2022-02-11"^^xsd:date ] ;
     container:bearingRotation 0e+00 .
 
 <http://www.example.com/features/adoptedVectors> a surv:SurveyedVector,
@@ -185,9 +188,9 @@
 <http://www.example.com/features/l595769> a geojson:Feature ;
     container:purpose <http://www.example.com/features/adoption> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <http://www.example.com/features/44438418> <http://www.example.com/features/29960715> ) ],
+            geojson:relatedFeatures ( <http://www.example.com/features/44438410> <http://www.example.com/features/29960715> ) ],
         [ a geojson:LineString ;
-            geojson:relatedFeatures ( <http://www.example.com/features/44438410> <http://www.example.com/features/29960715> ) ] .
+            geojson:relatedFeatures ( <http://www.example.com/features/44438418> <http://www.example.com/features/29960715> ) ] .
 
 <http://www.example.com/features/l599462> a geojson:Feature ;
     container:purpose <http://www.example.com/features/radiation> ;
@@ -283,14 +286,14 @@
 <http://www.example.com/features/11745161> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "LP X DP 119552" ;
-            dcterms:hasPart [ rdfs:label "X" ;
-                    commonpatterns:namePartType "Stamp" ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "LP" ;
                     commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "119552" ;
                     commonpatterns:namePartType "Source" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                [ rdfs:label "X" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:lp ;
@@ -302,12 +305,12 @@
 <http://www.example.com/features/1725787> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM E DP 119552" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "RM E" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "DP 119552" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "RM E" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Source" ] ] ;
     rdfs:comment "ALP in channel of drive" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:bp ;
@@ -318,10 +321,10 @@
 
 <http://www.example.com/features/8446456> a geojson:Feature ;
     parcel:appellation [ rdfs:label "Area Z DP 572532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
+            dcterms:hasPart [ rdfs:label "572532" ;
                     commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "Area" ;
                     commonpatterns:namePartType "ParcelType" ],
                 [ rdfs:label "Z" ;
@@ -421,12 +424,12 @@
 <http://www.example.com/features/29962820> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "Peg 4 DP 119552" ;
-            dcterms:hasPart [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "4" ;
+            dcterms:hasPart [ rdfs:label "4" ;
                     commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "Peg" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
@@ -440,14 +443,14 @@
 <http://www.example.com/features/29963073> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "Peg 8 DP 119553" ;
-            dcterms:hasPart [ rdfs:label "8" ;
-                    commonpatterns:namePartType "Stamp" ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "Peg" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "8" ;
+                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "119553" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                    commonpatterns:namePartType "Source" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:peg ;
@@ -463,10 +466,10 @@
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "Peg" ;
                     commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "7" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:peg ;
@@ -497,10 +500,10 @@
 <http://www.example.com/features/49655176> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 22 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "22" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "22" ;
+                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "UNMK" ;
@@ -520,10 +523,10 @@
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "23" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -535,12 +538,12 @@
 <http://www.example.com/features/49655178> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 24 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
+            dcterms:hasPart [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "Source" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "24" ;
                     commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 8 ;
@@ -554,14 +557,14 @@
 <http://www.example.com/features/49655179> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 25 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "25" ;
+            dcterms:hasPart [ rdfs:label "25" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -573,12 +576,12 @@
 <http://www.example.com/features/49655180> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 26 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
+            dcterms:hasPart [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "26" ;
                     commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 8 ;
@@ -592,14 +595,14 @@
 <http://www.example.com/features/49655181> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 27 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "UNMK" ;
+            dcterms:hasPart [ rdfs:label "UNMK" ;
                     commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "27" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -611,14 +614,14 @@
 <http://www.example.com/features/49655182> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 28 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "28" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "UNMK" ;
+            dcterms:hasPart [ rdfs:label "UNMK" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "28" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -634,10 +637,10 @@
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "29" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -649,14 +652,14 @@
 <http://www.example.com/features/49655184> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 30 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "30" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 8 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -703,16 +706,16 @@
 <http://www.example.com/features/11745104> a surv:GeodeticReferenceMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM C DP 119552 (EQ9W)" ;
-            dcterms:hasPart [ rdfs:label "C" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "EQ9W" ;
-                    commonpatterns:namePartType "geodeticStamp" ],
-                [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Source" ],
+            dcterms:hasPart [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "RM" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "EQ9W" ;
+                    commonpatterns:namePartType "geodeticStamp" ],
+                [ rdfs:label "C" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     rdfs:comment "Brass circular plaque flush in channel" ;
     commonpatterns:qualityMeasure 5 ;
     surv:geodeticid "EQ9W" ;
@@ -726,14 +729,14 @@
 <http://www.example.com/features/11745160> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM E DP 119552" ;
-            dcterms:hasPart [ rdfs:label "E" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Source" ],
+            dcterms:hasPart [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "RM" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "E" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
             surv:form nz-monument-form:bp ;
@@ -747,12 +750,12 @@
     rdfs:label [ rdfs:label "Peg 3 DP 119553" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "3" ;
+                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "119553" ;
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "Peg" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "3" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:empl ;
             surv:form nz-monument-form:peg ;
@@ -764,14 +767,14 @@
 <http://www.example.com/features/44438410> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM I DP 119553" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "I" ;
+            dcterms:hasPart [ rdfs:label "I" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "RM" ;
-                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "119553" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     rdfs:comment "ORM in channel above catch pits" ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
@@ -803,12 +806,12 @@
 <http://www.example.com/features/49655174> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "UNMK 20 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "20" ;
+            dcterms:hasPart [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "20" ;
                     commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "Source" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
@@ -826,10 +829,10 @@
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "21" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType "MarkType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nspe ;
             surv:form nz-monument-form:unmk ;
@@ -841,14 +844,14 @@
 <http://www.example.com/features/49655186> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM H DP 119553" ;
-            dcterms:hasPart [ rdfs:label "RM" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "119553" ;
-                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "H" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "119553" ;
+                    commonpatterns:namePartType "Source" ] ] ;
     rdfs:comment "ORM in channel above catch pits" ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
@@ -863,12 +866,12 @@
     rdfs:label [ rdfs:label "Peg 38 DP 572532" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "Peg" ;
+                    commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "38" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "Peg" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
             surv:form nz-monument-form:peg ;
@@ -880,14 +883,14 @@
 <http://www.example.com/features/29960715> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "Peg 6 DP 119553" ;
-            dcterms:hasPart [ rdfs:label "6" ;
-                    commonpatterns:namePartType "Stamp" ],
+            dcterms:hasPart [ rdfs:label "119553" ;
+                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "Peg" ;
                     commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "119553" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+                [ rdfs:label "6" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:nfnd ;
             surv:form nz-monument-form:peg ;
@@ -899,14 +902,14 @@
 <http://www.example.com/features/44438418> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "ALP I DP 481392" ;
-            dcterms:hasPart [ rdfs:label "481392" ;
+            dcterms:hasPart [ rdfs:label "ALP" ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "481392" ;
                     commonpatterns:namePartType "Source" ],
-                [ rdfs:label "I" ;
-                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "ALP" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                [ rdfs:label "I" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     rdfs:comment "ALP in channel of drive" ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:mkfd ;
@@ -921,12 +924,12 @@
     rdfs:label [ rdfs:label "UNMK 14 DP 572532" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "14" ;
-                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "Source" ],
                 [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "14" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:impm ;
             surv:form nz-monument-form:unmk ;
@@ -938,14 +941,14 @@
 <http://www.example.com/features/49655171> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "DISK 15 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "15" ;
+            dcterms:hasPart [ rdfs:label "15" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "DISK" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ] ] ;
     commonpatterns:qualityMeasure 7 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;
             surv:form nz-monument-form:peg ;
@@ -957,14 +960,14 @@
 <http://www.example.com/features/49655185> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "AP 1 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "1" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "Source" ],
                 [ rdfs:label "AP" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "Source" ] ] ;
     rdfs:comment "Flush in conc" ;
     commonpatterns:qualityMeasure 6 ;
     surv:monumentedBy [ surv:condition nz-monument-condition:relb ;

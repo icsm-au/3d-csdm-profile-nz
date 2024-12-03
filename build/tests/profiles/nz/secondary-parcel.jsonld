@@ -1,4 +1,5 @@
 {
+  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld",
   "id": "DP_572532",
   "name": "DP 572532",
   "description": "New Zealand Secondary Parcel Example",
@@ -2205,6 +2206,5 @@
     }
   ],
   "supportingDocuments": [],
-  "annotations": [],
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-nz/build/annotated/profiles/nz/context.jsonld"
+  "annotations": []
 }

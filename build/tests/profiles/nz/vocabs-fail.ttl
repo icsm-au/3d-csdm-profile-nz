@@ -6,6 +6,7 @@
 @prefix icsm-jurisdictions: <https://linked.data.gov.au/def/csdm/jurisdictions/> .
 @prefix nz-monument-form: <https://linked.data.gov.au/def/csdm/nz-monument-form/> .
 @prefix nz-survey-type: <https://linked.data.gov.au/def/csdm/nz-survey-type/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -16,6 +17,7 @@
 <file:///github/workspace/fail-Examples-DP_572532> a container:CSD,
         geojson:FeatureCollection ;
     rdfs:label "DP 572532" ;
+    dct:time [ owlTime:hasTime "2022-05-23"^^xsd:date ] ;
     prov:wasGeneratedBy <surveyreg-fail:DP_1-S2> ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:4167 ;
@@ -43,6 +45,7 @@
     prov:wasAttributedTo icsm-jurisdictions:fail .
 
 <file:///github/workspace/DP_119552> rdfs:label "DP 119552" ;
+    dct:time [ owlTime:hasTime "2022-05-23"^^xsd:date ] ;
     container:bearingRotation 1e-03 .
 
 <file:///github/workspace/points> a geojson:FeatureCollection ;
